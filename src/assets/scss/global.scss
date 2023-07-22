@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  height: 32px;
+  padding: 2px 5px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--block-border-radius);
+  will-change: border-color;
+  transition: 0.25s border-color 0s linear;
+
+  &:hover {
+    border-color: var(--color-primary-darker);
+  }
+
+  &:read-only {
+    cursor: default;
+  }
+
+  &:read-only,
+  &:disabled {
+    border-color: #696969;
+  }
+}
+
+button {
+  height: 32px;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+pre {
+  margin: 0;
+}
