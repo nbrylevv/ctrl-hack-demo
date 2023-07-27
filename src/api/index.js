@@ -1,7 +1,7 @@
 class Api {
   saveForm(data) {
     return new Promise((resolve) => {
-      const responseValue = data.qty % 2 === 0;
+      const responseValue = Math.abs(parseInt(data.qty % 2, 0)) === 0;
 
       return setTimeout(() => {
         resolve({ success: responseValue });
